@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anthony Gachure</title>
+    <meta name="description" content="Hi, I'm Anthony Gachure, Bsc. A Full Stack Developer &amp; Researcher. Co-founder of Elevate Technologies.">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+        }
+        #console {
+            font-family: courier, monospace;
+            color: #fff;
+            width: 750px;
+            margin: 100px auto 0 auto;
+            font-size: 14px;
+        }
+        a {
+            color: #0bc;
+            text-decoration: none;
+        }
+        #a {
+            color: #0f0;
+        }
+        #c {
+            color: #0bc;
+        }
+        #b {
+            color: #ff0096;
+        }
+        .container {
+            padding-top: 20px;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        #image {
+            padding-top: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row"></div>
+        
+        <div class="col-md-4 pull-right col-xs-12" id="image" style="height: 450px; width: 371px;">
+            <img class="img-responsive" src="tony.jpg" style="height: 100%; width: 65%;">
+        </div>
+        
+        <div class="col-md-offset-2 col-md-6">
+            <h1>Anthony Gachure, Bsc.</h1>
+            
+            <h3><span style="font-size: 16px;"><a href="https://github.com/gachure1">Websites I developed</a></span></h3>
+            <h3><span style="font-size: 16px;"><a href="https://www.linkedin.com/in/anthony-gachure-25574621a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B7dlZbzADTymixSyxi1eXiw%3D%3D">Certificates acquired</a></span></h3>
+            <h3><span style="font-size: 16px;"><a href="https://github.com/gachure1">Applications I've created</a></span></h3>
+            
+            <div id="console">
+                <span id="a">anthony@gachure</span>:<span id="b">~</span><span id="c">$</span> sudo tony <br><br><br>
+                <p>Hi, I'm Anthony Gachure, Bsc.</p>
+                <br><br>A Full Stack Developer &amp; Blue Team Pen Tester.<br><br>Co-founder of <a href="https://www.instagram.com/life_of_gachure/?hl=en#">Elevate Technologies</a>.
+                <br><p></p>
+                <br><br>I engage in <a href="https://www.instagram.com/_hounds__/?hl=en#">Sports.</a>
+                <br><br>Projects featuring the <a href="https://github.com/gachure1">My artworks.</a><br><br>
+                Email Address: <a href="mailto:gachureanthony@gmail.com" target="_top">gachureanthony@gmail.com</a>
+                <br>My Twitter handle is: <a href="https://x.com/AnthonyGachure">@Tony Gachure</a>.<br>
+                <a href="https://www.youtube.com/watch?v=G6rnfeiK-eg&amp;list=PLLC1HkFDEOvnBlbhRw7eEE6Q41dFDrD34" target="_blank">Youtube Videos</a> I have featured in.<br><br>
+                <p>More about me can be found <a href="https://www.linkedin.com/in/anthony-gachure-25574621a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B7dlZbzADTymixSyxi1eXiw%3D%3D">here</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var Typer = {
+            text: null,
+            index: 0,
+            speed: 3,
+            file: "bright.txt",
+            init: function() {
+                $.get(Typer.file, function(data) {
+                    Typer.text = data;
+                    Typer.text = Typer.text.slice(0, Typer.text.length - 1);
+                    Typer.addText();
+                });
+            },
+            addText: function() {
+                if (Typer.index < Typer.text.length) {
+                    var cont = Typer.text.substring(0, Typer.index + 1);
+                    var rtn = new RegExp("\n", "g");
+                    $("#console").html(cont.replace(rtn, "<br/>"));
+                    Typer.index++;
+                    
+                    // Introduce lag effect
+                    var lag = Math.random() < 0.1; // 10% chance of lag
+                    var delay = lag ? 1500 : 500; // 1.5 seconds for lag, otherwise 0.5 seconds
+
+                    setTimeout(Typer.addText, delay);
+                }
+            }
+        };
+
+        Typer.init();
+    </script>
+</body>
+</html>
