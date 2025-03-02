@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphic Designs by Anthony Gachure</title>
-    <meta name="description" content="Explore graphic designs by Anthony Gachure, including videos and images showcasing creativity and skills in design.">
+    <title>Graphic and UI/UX Designs by Anthony Gachure</title>
+    <meta name="description" content="Explore graphic and UI/UX designs by Anthony Gachure, including videos and images showcasing creativity and skills in design.">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -16,7 +16,7 @@
             padding-top: 50px;
             text-align: center;
         }
-        h1 {
+        h1, h2 {
             color: #0bc;
             margin-bottom: 30px;
         }
@@ -25,6 +25,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+            margin-bottom: 50px;
         }
         .gallery-item {
             background: #111;
@@ -44,43 +45,104 @@
             font-size: 14px;
             color: #0bc;
         }
+        .brands-section {
+            margin-top: 50px;
+        }
+        .brands-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .brands-list img {
+            max-width: 150px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .brands-list img:hover {
+            filter: grayscale(0%);
+        }
         footer {
             margin-top: 50px;
             font-size: 14px;
+        }
+        a {
+            color: #0bc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Graphic Designs by Anthony Gachure</h1>
+        <h1>Graphic and UI/UX Designs by Anthony Gachure</h1>
+
+        <!-- Graphic Design Section -->
+        <h2>Graphic Designs</h2>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="soul brother logo Magazine.png" alt="Graphic Design 1">
+                <img src="soul brother logo Magazine.png" alt="Soul Brother Logo">
                 <p>Soul Brother Logo</p>
             </div>
             <div class="gallery-item">
-                <img src="Jamhuri edition.png" alt="Graphic Design 2">
+                <img src="Jamhuri edition.png alt="Jamhuri Banner">
                 <p>Jamhuri Banner</p>
             </div>
             <div class="gallery-item">
                 <video controls>
                     <source src="kibali awards.mp4" type="video/mp4">
-                    Kibali awards .
+                    Your browser does not support the video tag.
                 </video>
                 <p>Kibali Awards</p>
             </div>
             <div class="gallery-item">
-                <img src="Black & White Minimalist Signature Personal Brand Logo.png" alt="Graphic Design 3">
+                <img src="Black & White Minimalist Signature Personal Brand Logo.png" alt="Personal Brand Logo">
                 <p>Personal Brand</p>
             </div>
             <div class="gallery-item">
                 <video controls>
                     <source src="kibali awards.mp4" type="video/mp4">
-                    Winning Shot.
+                    Your browser does not support the video tag.
                 </video>
                 <p>Winning Shot</p>
             </div>
         </div>
+
+        <!-- UI/UX Design Section -->
+        <h2>UI/UX Designs</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="project 1.jpg" alt="UI/UX Design 1">
+                <p>Mobile App Design</p>
+            </div>
+            <div class="gallery-item">
+                <img src="project 2.png" alt="UI/UX Design 2">
+                <p>Website Redesign</p>
+            </div>
+            <div class="gallery-item">
+                <img src="project 3.png" alt="UI/UX Design 3">
+                <p>Dashboard Interface</p>
+            </div>
+            <div class="gallery-item">
+                <img src="project 4.jpg" alt="UI/UX Design 4">
+                <p>E-commerce Platform</p>
+            </div>
+        </div>
+
+        <!-- Brands I've Worked With Section -->
+        <div class="brands-section">
+            <h2>Brands I've Worked With</h2>
+            <div class="brands-list">
+                <img src="optiven-group-logo.png" alt="Optiven Group">
+                <img src="kibali-awards logo.png" alt="Kibali awards">
+                <img src="mediant international.png" alt="Mediant International">
+            </div>
+        </div>
+
         <footer>
             <p>More about my work: <a href="https://github.com/gachure1" target="_blank">GitHub Profile</a></p>
             <p>Return to <a href="index.html" target="_blank">Homepage</a></p>
